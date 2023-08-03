@@ -1,5 +1,7 @@
 # nvimConfig
-My personal neovim configuration. To use, run `mkdir ~/.config && git clone https://github.com/EnricoSteez/nvimConfig.git ~/.config/nvim`
+My personal neovim configuration. To use, run:
+
+`mkdir ~/.config && git clone https://github.com/EnricoSteez/nvimConfig.git ~/.config/nvim`
 ## Directory Structure
 ```
 ~/.config/nvim
