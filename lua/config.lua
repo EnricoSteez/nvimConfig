@@ -2,11 +2,13 @@
 vim.o.relativenumber = true
 vim.o.cursorline = true
 vim.o.hidden = true
-vim.o.autoindent  = true
+vim.o.autoindent = true
+vim.o.smartindent = true
+vim.o.cindent = true
 vim.o.inccommand = "split"
 vim.o.mouse = "a"
 vim.o.number = true
-vim.o.splitbelow = true 
+vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.title = true
 vim.o.wildmenu = true
