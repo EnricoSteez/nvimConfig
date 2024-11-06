@@ -25,7 +25,9 @@ return require('packer').startup(function(use)
   use 'airblade/vim-rooter'
   use 'APZelos/blamer.nvim'
   use 'ThePrimeagen/harpoon'
+  use 'rhysd/conflict-marker.vim'
 
+  -- LSP
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'

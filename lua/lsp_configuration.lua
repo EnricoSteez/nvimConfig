@@ -32,7 +32,7 @@ if not vim.g.vscode then
       vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
       vim.keymap.set('n', 'gr', telescope_builtin.lsp_references, opts)
       vim.keymap.set('n', '<leader>fs', telescope_builtin.lsp_document_symbols, opts)
-      vim.keymap.set('n', '<space>F', function()
+      vim.keymap.set('n', '<leader>F', function()
         vim.lsp.buf.format { async = true }
       end, opts)
     end,
@@ -57,7 +57,8 @@ if not vim.g.vscode then
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
       ['<C-Space>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
-      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+      -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+      ['<CR>'] = cmp.mapping.confirm({ select = false }),
       ['<Tab>'] = cmp.mapping(function(fallback)
         if cmp.visible() then
           cmp.select_next_item()
@@ -154,7 +155,7 @@ if not vim.g.vscode then
       pylsp = {
         plugins = {
           pycodestyle = {
-            ignore = {'W391', 'E402', 'W503'},
+            ignore = {'W391', 'E402', 'W503', 'E501', 'E266'},
             maxLineLength = 100
           }
         }
@@ -181,4 +182,9 @@ if not vim.g.vscode then
       usePlaceholders = true,
     }
   }
+
+lspconfig.bashls.setup{
+  filetypes = { "sh" , "zshrc"}
+}
 end
+

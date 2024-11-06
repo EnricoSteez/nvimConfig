@@ -2,9 +2,6 @@
 vim.o.relativenumber = true
 vim.o.cursorline = true
 vim.o.hidden = true
-vim.o.autoindent = true
-vim.o.smartindent = true
-vim.o.cindent = true
 vim.o.inccommand = "split"
 vim.o.mouse = "a"
 vim.o.number = true
@@ -36,6 +33,11 @@ vim.g.python_highlight_all = 1
 
 vim.g.NERDTreeWinSize = 40
 vim.o.NERDTreeQuitOnOpen = 1
+
+vim.cmd [[filetype indent plugin on]]
+-- Prevent vim from doing weird C-style indentations for gitcommit and text files!
+vim.cmd [[autocmd FileType gitcommit setlocal colorcolumn=75 | set nosmartindent | set noautoindent | set nocindent]]
+vim.cmd [[autocmd FileType text setlocal colorcolumn=75 | set nosmartindent | set noautoindent | set nocindent]]
 
 if vim.fn.has('persistent_undo') then
   vim.o.undofile = true
