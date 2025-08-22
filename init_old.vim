@@ -101,18 +101,7 @@ let g:NERDTreeWinSize=40
 let NERDTreeQuitOnOpen=1
 
 " ###### ##### ##### ##### ##### ###### EDIT init.vim BLAZINGLY FAST #### ##### ##### ##### #####  
-" Reloads vimrc after saving but keep cursor position
-" if !exists('*ReloadVimrc')
-"    fun! ReloadVimrc()
-"        let save_cursor = getcurpos()
-"        source $MYVIMRC
-"        call setpos('.', save_cursor)
-"    endfun
-" endif
-" autocmd! BufWritePost $MYVIMRC call ReloadVimrc()
-
-" ###### ##### ##### ##### ##### ###### EDIT init.vim BLAZINGLY FAST #### ##### ##### ##### #####  
-nnoremap <leader>i :edit ~/.config/nvim/init_old.vim<cr>
+" nnoremap <leader>i :edit ~/.config/nvim/init_old.vim<cr>
 nnoremap <leader>I :edit $MYVIMRC<cr>
 
 " VIM ROOTER for HeatWave

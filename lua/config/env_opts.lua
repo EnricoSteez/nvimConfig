@@ -32,7 +32,6 @@ vim.g.python3_host_prog = '/usr/local/bin/python3'
 vim.g.python_highlight_all = 1
 
 vim.g.NERDTreeWinSize = 40
-vim.o.NERDTreeQuitOnOpen = 1
 
 vim.cmd [[filetype indent plugin on]]
 -- Prevent vim from doing weird C-style indentations for gitcommit and text files!

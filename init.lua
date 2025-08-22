@@ -1,8 +1,10 @@
-require('plugins') -- Packer
-require('plugins_config') -- All the require('...').setup{...}
-require('config') -- Configuration variables
-require('mappings') -- Custom key mappings
-require('lsp_configuration') -- LSP Configuration
+require('config.lazy')
+require('config.plugins_config')
+require('config.env_opts')
+require('config.key_bindings')
+require('config.lsp_configuration')
 
 vim.cmd [[colorscheme catppuccin]]
 
+-- Verify it's being inited correctly
+vim.notify("init.lua loaded", vim.log.levels.INFO)

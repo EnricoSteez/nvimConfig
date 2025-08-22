@@ -50,18 +50,12 @@ if not vim.g.vscode then
 
   vim.opt.list = true
 
-  -- require("ibl").setup({
-  --   indent = {
-  --     tab_char = "▏"
-  --   }
-  -- })
-
   require("nvim-autopairs").setup()
   require('telescope').load_extension('vim_bookmarks')
 
   require 'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all" (the five listed parsers should always be installed)
-    ensure_installed = { "go" },
+    ensure_installed = { "go", "lua", "python" },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = true,
